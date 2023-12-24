@@ -1,0 +1,280 @@
+*{
+  
+    background: #000000;
+    color: white;
+}
+#outer{
+    background-image: url(animated-space-background-1ticc.webp) ;
+    background-repeat: no-repeat;
+    background-size:750px 500px;
+    width: 750px;
+    height: 500px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;   
+}
+#sec{
+    width: 650px;
+    height: 450px;
+    background:rgba(255, 255, 255, 0.7);
+    
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    overflow-y: hidden;
+
+}
+#header{
+    color: #000000;
+    background: transparent;
+    text-align: center;
+    transform: translateY(-10px); 
+}
+#spbox{
+    width: 500px;
+    height: 350px;
+    background-image: url(High_resolution_wallpaper_background_ID_77700328664.webp);
+    margin: auto;
+    transform: translateY(-10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: start;
+    transition: all 2s;
+   border-radius: 20px 20px 0px 0px ;
+}
+#addinfo{
+    width: 500px;
+    height: 250px;
+    background: yellow;
+    margin: -15px auto auto auto;
+    
+}
+button{
+    width: 180px;
+    height: 55px;
+    border-radius: 20px;
+    background-color: rgb(96, 205, 222);
+    text-align: center;
+    margin: top 90px ;
+    position: absolute;
+    top: 30px;
+    left: 165px;
+    visibility: visible;
+}
+#qust{
+    width: 50%;
+    height: 80%;
+    margin-left: 20px;
+    background: transparent;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    visibility: hidden;
+}
+#info{
+    width: 50%;
+    height: 80%;
+    margin-left: 20px;
+ 
+    background: transparent;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    visibility: hidden;
+}
+#ication_status,#latitude,#longitude{
+   width: 100px;
+   height: 200px;
+   background: transparent;
+   color: white;
+   font-size:large ;
+   font-weight: 500;
+}
+#hi,#latitude_info,#longitude_info{
+    width: 100px;
+    height: 200px;
+    background: transparent;
+    color: white;
+    font-size:large ;
+    font-weight: 500;
+ }
+ #can{
+    width: 100%;
+    height: 100%;
+    margin-top: -20px;
+    background: transparent;
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+    justify-content: center;   
+ }
+ #head1{
+    background: transparent;
+    color:white;
+    text-align: center;
+    transform: translateY(10px); 
+ }
+ #addinfo{
+    visibility: hidden;
+    border-radius: 0px 0px  20px 20px  ;
+    background-image: url(abstract-background-combination-blue-black-color-transitions-template-presentations-banners-flyers-invitations-180033471.webp);
+ }
+ #add_info{
+    width: 45%;
+    height: 80%;
+    background: transparent;
+    color: black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: -25px;
+  
+ }
+ span{
+    background: transparent;
+ }
+#info_add{
+    width: 45%;
+    height: 80%;
+    background: transparent;
+    color: black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: -25px;
+}
+#maps{
+    background: transparent;
+    color: blue;
+
+}
+@media (max-width:500px) {
+    #outer{
+        background-image: url(animated-space-background-1ticc.webp) ;
+        background-repeat: no-repeat;
+        background-size:411px 400px;
+        width: 411px;
+        height: 400px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid white;   
+    }
+    #sec{
+        width: 350px;
+    height: 350px;
+    background:rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    overflow-y: hidden;
+    }
+    #header{
+        color:black;
+        background: transparent;
+        text-align: center;
+        transform: translateY(-10px); 
+        font-size: 15px;  
+    }
+    #spbox{
+        width: 300px;
+        height: 315px;
+        background-image: url(High_resolution_wallpaper_background_ID_77700328664.webp);
+        margin: auto;
+        transform: translateY(-20px);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: start;
+        transition: all 2s;
+    }
+    #addinfo{
+        width: 300px;
+        height: 215px;
+        background-image: url(abstract-background-combination-blue-black-color-transitions-template-presentations-banners-flyers-invitations-180033471.webp);
+        margin: -25px auto auto auto;
+        
+    }
+    #head1{
+        background: transparent;
+        color:white;
+        text-align: center;
+        transform: translateY(10px);
+        font-size: 15px; 
+     }
+     #ication_status,#latitude,#longitude{
+        width: 100px;
+        height: 200px;
+        background: transparent;
+        color: #000000;
+        font-size:12px ;
+    }
+     #hi,#latitude_info,#longitude_info{
+         width: 100px;
+         height: 200px;
+         background: transparent;
+         color: #000000;
+         font-size: 12px;
+      }
+      span{
+        background: transparent;
+        font-size: 12px;
+     }
+     #add_info{
+        width: 45%;
+        height: 80%;
+        background: transparent;
+        color: black;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-top: 10px;
+      
+     }
+     #info_add{
+        width: 45%;
+        height: 80%;
+        background: transparent;
+        color: black;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-top: 10px;
+      
+     }
+     button{
+        width: 120px;
+        height: 55px;
+        border-radius: 20px;
+        background-color: rgb(96, 205, 222);
+        text-align: center;
+        margin: top 90px ;
+        position: absolute;
+        top: 30px;
+        left: 88px;
+        visibility: visible;
+    }
+    #ication_status,#latitude,#longitude{
+        color: white;
+    }
+    #hi,#latitude_info,#longitude_info{
+        color: white;
+    }
+
+
+    
+}
