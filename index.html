@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+<div id="outer" >
+  <div id="sec">
+     <h1 id="header">Geo location</h1>
+     <div id="spbox">
+      <button id="runner" type="button" onclick="bought()">click to get details</button>
+        <div id="qust">
+          <span id="ication_status">geo_location_status</span>
+          <span id="latitude">latitude</span>
+          <span id="longitude">longitude</span>
+        </div>
+        <div id="info">
+          <span id="hi">null</span>
+          <span id="latitude_info">null</span>
+          <span id="longitude_info">null</span>
+
+        </div>
+     </div>
+
+    <div id="addinfo">
+      <h2 id="head1">Adddational info</h2>
+       <div id="can">
+        
+        <div id="add_info">
+          <span>continent name</span>
+          <span>continent code</span>
+          <span>country name</span>
+          <span>country code</span>
+          <span>state</span>
+          <span>city</span>
+          <span>zone</span>
+          <span>description</span>
+          <span>accuracy</span>
+          <span>vist the map</span>
+
+        </div>
+        <div id="info_add">
+         <span id="continent">null</span>
+         <span id="continentCode">null</span>
+         <span id="country">null</span>
+         <span id="countryCode">null</span>
+         <span id="state">null</span>
+         <span id="city">null</span>
+         <span id="zone">null</span>
+         <span id="description">null</span>
+         <span id="accuracy"></span>
+         <span id="maps">null</span>
+      
+        
+         
+
+        </div>
+       </div> 
+    </div>
+    
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+   
+
+    <!-- <a href="javascript:void(0);" NAME="Error Handling"  
+  title="ZeroDivisionError handling"
+  onClick=window.open("https://www.google.com/maps/@${latitude},${longitude},18z","Ratting","width=300,height=300,left=300,top=200,toolbar=0,status=0,");>Click here to open the child window</a>
+    -->
+    
+   
+<script>
+    if(!navigator.geolocation){
+        throw new Error("there is no locaator");
+
+    }
+  function bought(){
+    document.getElementById("runner").style.visibility="hidden";
+    document.getElementById("spbox").style.height="100px";
+    document.getElementById("addinfo").style.visibility="visible";
+    document.getElementById("qust").style.visibility="visible";
+    document.getElementById("info").style.visibility="visible";
+    function success(pos){
+        console.log(pos);
+        var latitude=pos.coords.latitude;
+        var longitude=pos.coords.longitude;
+        
+       document.getElementById("hi").innerHTML="success";
+       document.getElementById("longitude_info").innerHTML= longitude;
+       document.getElementById("latitude_info").innerHTML= latitude;
+       document.getElementById("maps").innerHTML=`<a id="maps" href="https://www.google.com/maps/@${latitude},${longitude},18z"  target="#">map</a>`  +` <a href="javascript:void(0);" NAME="Error Handling"  
+  title="ZeroDivisionError handling"
+  onClick=window.open("https://www.google.com/maps/@${latitude},${longitude},18z","Ratting","width=300,height=300,left=300,top=200,toolbar=0,status=0," id="maps");>mapsss</a>`;
+
+
+       const geoApiUrl=`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localitylanguage=en`
+
+
+       fetch(geoApiUrl)
+       .then(res => res.json())
+       .then(data =>{
+        console.log(data)
+        var state=data.localityInfo.administrative[1].name;
+        console.log(state);
+        var continent=document.getElementById("continent").innerHTML=data.continent;
+        var continentCode=document.getElementById("continentCode").innerHTML=data.continentCode;
+        var country=document.getElementById("country").innerHTML=data.countryName;
+        var countryCode=document.getElementById("countryCode").innerHTML=data.countryCode;
+        var state=document.getElementById("state").innerHTML=state;
+        var city=document.getElementById("city").innerHTML=data.city;
+        var zone= document.getElementById("zone").innerHTML=data.localityInfo.administrative[3].name;
+        var description=document.getElementById("description").innerHTML=data.localityInfo.administrative[2].description;
+        var accuracy=document.getElementById('accuracy').innerHTML=pos.coords.accuracy;
+        console.log(country);
+        
+       })
+      
+
+        
+    }
+    function error(){
+        document.getElementById("hi").innerHTML="fail";
+    }
+    const options={};
+    window.navigator.geolocation.getCurrentPosition(success,error,options)
+  }
+</script>
+</html>
